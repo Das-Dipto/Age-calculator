@@ -24,18 +24,18 @@ function DateInput(props) {
 
   return (
     <>
-        <div className="date-input-field d-flex my-5">
+        <div className="date-input-field d-flex mt-2 mb-5">
             <div className="day-input">
                 <label className="d-block mb-1">DAY</label>
-                <input type="text" className='w-75' onChange={handleDate}/>
+                <input type="text" className='w-75' placeholder='DD' onChange={handleDate}/>
             </div>
             <div className="month-input">
                 <label className="d-block mb-1">MONTH</label>
-                <input type="text" className='w-75' onChange={handleMonth}/>
+                <input type="text" className='w-75' placeholder='MM' onChange={handleMonth}/>
             </div>
             <div className="year-input">
                 <label className="d-block mb-1">YEAR</label>
-                <input type="text" className='w-75' onChange={handleYear} />
+                <input type="text" className='w-75' placeholder='YY' onChange={handleYear} />
             </div>
         </div>
         <div className="button d-flex justify-content-end">

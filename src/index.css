@@ -5,6 +5,17 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+  background-color: hsl(0, 0%, 94%) !important;
+}
+
+.container{
+  background-color: #fff;
+  padding: 2rem !important;
+  border-radius: 18px !important;
+  border-bottom-right-radius: 8rem !important;
+}
+
 input{
   padding: 0.4rem 1rem;
 }
@@ -12,13 +23,47 @@ input{
 input[type="text"] {
   font-size:20px;
   font-weight: 800;
+  color:hsl(0, 1%, 44%);
+}
+
+input[type="text"]:focus{
+  outline-color: hsl(259, 100%, 65%);
 }
 
 button{
+  border: none !important;
+  outline: none !important;
   border-radius: 50% !important;
+  background-color: hsl(259, 100%, 65%) !important;
 }
 
-.container{
-  height: 70vh;
+label{
+  color:hsl(0, 1%, 44%);
 }
 
+span{
+  color:hsl(259, 100%, 65%) ;
+}
+
+h1{
+  font-size: 4rem !important;
+  font-weight: 800 !important;
+  font-style: italic;
+}
+
+
+
+
+
+/* ### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%) */
