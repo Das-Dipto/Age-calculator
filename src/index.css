@@ -2,4 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+input{
+  padding: 0.4rem 1rem;
+}
+
+input[type="text"] {
+  font-size:20px;
+  font-weight: 800;
+}
+
+button{
+  border-radius: 50% !important;
+}
+
+.container{
+  height: 70vh;
+}
+
