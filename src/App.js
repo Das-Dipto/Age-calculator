@@ -30,12 +30,12 @@ function App() {
                 `0`}
               `;
 
-    // Calculate the difference in Date         
-    let diffInDate = `
-                ${( parseInt(currentDate.getDate()) !== parseInt(birthDate.getDate())) ?
-                Math.abs(parseInt(currentDate.getDate()) - parseInt(birthDate.getDate())):
-                `0`}
-             `;
+    // // Calculate the difference in Date         
+    // let diffInDate = `
+    //             ${( parseInt(currentDate.getDate()) !== parseInt(birthDate.getDate())) ?
+    //             Math.abs(parseInt(currentDate.getDate()) - parseInt(birthDate.getDate())):
+    //             `0`}
+    //          `;
    
     setYear(diffInYears);
     setMonth(diffInMonth);
