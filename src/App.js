@@ -12,9 +12,21 @@ function App() {
   const [year, setYear] = useState('');
 
   const btnPress =(day, month, year)=>{
-    setDay(day)
-    setMonth(month)
-    setYear(year)
+  
+    let birthDate =new Date(`${parseInt(year)}-${parseInt(month)}-${parseInt(day)}`);
+    
+    let currentDate = new Date();
+
+    // Calculate the difference in years
+    const diffInYears = currentDate.getFullYear() - birthDate.getFullYear();
+
+    // Calculate the difference in months
+    const diffInMonths = (currentDate.getMonth() - birthDate.getMonth()) ;
+
+    // Calculate the difference in days
+    const diffInDays = Math.floor((currentDate - birthDate) / (1000 * 60 * 60 * 24));
+
+    setYear(diffInYears)
   }
 
   return (

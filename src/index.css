@@ -37,6 +37,10 @@ button{
   background-color: hsl(259, 100%, 65%) !important;
 }
 
+button:hover{
+    background-color:hsl(0, 0%, 8%) !important;
+}
+
 label{
   color:hsl(0, 1%, 44%);
 }
