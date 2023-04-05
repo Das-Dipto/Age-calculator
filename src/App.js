@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useState } from 'react';
 import './index.css'
 import './App.css';
@@ -7,39 +7,37 @@ import AgeDisplay from './Components/AgeDisplay';
 
 
 function App() {
-  const [dayVal, setDay] = useState('');
-  const [monthVal, setMonth] = useState('');
-  const [year, setYear] = useState('');
+  const [dayVal, setDay] = useState('_ _');
+  const [monthVal, setMonth] = useState('_ _');
+  const [year, setYear] = useState('_ _');
+
 
   const btnPress =(day, month, year)=>{
   
-    let birthDate =new Date(`${parseInt(year)}-${parseInt(month)}-${parseInt(day)}`);
-    let currentDate = new Date();
+          let currentDate = new Date();
+          let currentDay = currentDate.getDate();
+          let currentMonth = 1 + currentDate.getMonth();
+          let currentYear = currentDate.getFullYear();
 
-    // Calculate the difference in years
-    let diffInYears = `
-              ${( parseInt(currentDate.getFullYear()) !== parseInt(birthDate.getFullYear())) ?
-              Math.abs(parseInt(currentDate.getFullYear()) - parseInt(birthDate.getFullYear())):
-              `0`}
-            `;
+          const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-    // Calculate the difference in month
-    let diffInMonth = `
-                ${( parseInt(currentDate.getMonth() + 1) !== parseInt(birthDate.getMonth() + 1)) ?
-                Math.abs(parseInt(currentDate.getMonth() + 1) - parseInt(birthDate.getMonth() + 1)):
-                `0`}
-              `;
+          if(parseInt(day) > currentDay){
+              currentDay = currentDay + months[currentMonth - 1];
+              currentMonth = currentMonth - 1;
+          }
+          
+          // if(parseInt(month) > currentMonth){
+          //   currentMonth = currentMonth + 12;
+          //   currentYear =currentYear - 1;
+          // }
 
-    // Calculate the difference in Date         
-    let diffInDate = `
-                ${( parseInt(currentDate.getDate()) !== parseInt(birthDate.getDate())) ?
-                Math.abs(parseInt(currentDate.getDate()) - parseInt(birthDate.getDate())):
-                `0`}
-             `;
-   
-    setYear(diffInYears);
-    setMonth(diffInMonth);
-    setDay(diffInDate);
+          const d = currentDay - parseInt(day);
+          // const m = currentMonth - parseInt(month);
+          // const y = currentYear - parseInt(year);
+
+          setDay(d + 1);
+          // setMonth(m);
+          // setYear(y);
 
   }
 
