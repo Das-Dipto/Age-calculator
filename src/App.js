@@ -33,11 +33,11 @@ function App() {
 
           const d = currentDay - parseInt(day);
           const m = currentMonth - parseInt(month);
-          // const y = currentYear - parseInt(year);
+          const y = currentYear - parseInt(year);
 
           setDay(d + 1);
           setMonth(m);
-          // setYear(y);
+          setYear(y);
 
   }
 
