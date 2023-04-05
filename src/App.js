@@ -26,17 +26,17 @@ function App() {
               currentMonth = currentMonth - 1;
           }
           
-          // if(parseInt(month) > currentMonth){
-          //   currentMonth = currentMonth + 12;
-          //   currentYear =currentYear - 1;
-          // }
+          if(parseInt(month) > currentMonth){
+            currentMonth = currentMonth + 12;
+            currentYear =currentYear - 1;
+          }
 
           const d = currentDay - parseInt(day);
-          // const m = currentMonth - parseInt(month);
+          const m = currentMonth - parseInt(month);
           // const y = currentYear - parseInt(year);
 
           setDay(d + 1);
-          // setMonth(m);
+          setMonth(m);
           // setYear(y);
 
   }
