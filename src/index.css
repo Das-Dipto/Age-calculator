@@ -55,6 +55,12 @@ h1{
   font-style: italic;
 }
 
+.special-error-message{
+  color: red;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
 
 
 
