@@ -93,7 +93,7 @@ function DateInput(props) {
 
   return (
     <>
-        <div className="date-input-field d-flex mt-2 mb-5">
+        <div className="date-input-field d-flex flex-wrap flex-sm-nowrap mt-2 mb-3">
             <div className="day-input">
                 <label className="d-block mb-1">DAY</label>
                 <input type="text" className='w-75' placeholder='DD' onChange={handleDate} style={dayerrorStyle}/>
@@ -110,7 +110,7 @@ function DateInput(props) {
                 <p className='special-error-message'>{yearErrorMessage}</p>
             </div>
         </div>
-        <div className="button d-flex justify-content-end">
+        <div className="button d-flex justify-content-center justify-content-md-end mb-5">
             <button type="button" className="btn btn-primary p-2 " onClick={()=>props.btnPress(dayVal,monthVal,yearVal)}>
                 <img src={customLogo} alt="customLogo" />
             </button>
